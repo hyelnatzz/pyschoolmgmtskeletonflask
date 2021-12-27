@@ -1,13 +1,13 @@
 from flask import Blueprint
 
-student = Blueprint('student', __name__, url_prefix='/student')
+student_bp = Blueprint('student_bp', __name__, url_prefix='/student')
 
 
-@student.route('/')
+@student_bp.route('/')
 def student_home():
     return 'student profile page'
 
 
-@student.route('/new/')
+@student_bp.route('/new/')
 def new_student():
-    return 'regustering new student page'
+    return 'registering new student page'
